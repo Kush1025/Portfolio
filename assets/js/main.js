@@ -129,22 +129,22 @@ function renderCertifications() {
 // Events
 function setupEventListeners() {
   // Photo upload
-  const profileContainer = $('#profileContainer');
-  const photoInput = $('#photoInput');
-  if (profileContainer && photoInput) {
-    profileContainer.addEventListener('click', () => photoInput.click());
-    photoInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (!file) return;
-      const reader = new FileReader();
-      reader.onload = (ev) => {
-        window.profileData.profilePhoto = ev.target.result;
-        renderProfile();
-        toast('Profile photo updated!');
-      };
-      reader.readAsDataURL(file);
-    });
-  }
+  // const profileContainer = $('#profileContainer');
+  // const photoInput = $('#photoInput');
+  // if (profileContainer && photoInput) {
+  //   profileContainer.addEventListener('click', () => photoInput.click());
+  //   photoInput.addEventListener('change', (e) => {
+  //     const file = e.target.files[0];
+  //     if (!file) return;
+  //     const reader = new FileReader();
+  //     reader.onload = (ev) => {
+  //       window.profileData.profilePhoto = ev.target.result;
+  //       renderProfile();
+  //       toast('Profile photo updated!');
+  //     };
+  //     reader.readAsDataURL(file);
+  //   });
+  // }
 
   // Customize modal (optional buttons guarded)
   const btnCustomize = $('#btnCustomize');
