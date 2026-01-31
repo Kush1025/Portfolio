@@ -85,6 +85,13 @@ window.education = [
 
 window.experience = [
   {
+    title: 'Software Engineering Intern',
+    company: 'Stateable',
+    period: 'Nov 2025 - Present',
+    description: 'I built an AI-powered document processing pipeline that parses insurance documents in multiple formats and normalizes them into a single standardized schema. Using Python on Ubuntu, I combined Claude (via AI agents) with deterministic parsing logic such as regex-based cleaning and validation to extract key policy, commission, and quote data while handling noisy and inconsistent inputs. The pipeline was containerized with Docker, deployed using AWS Lambda via the AWS CLI, and integrated with DynamoDB and MongoDB for reliable storage and fast access. I also set up GitLab CI/CD to automate testing and deployments, ensuring the system was scalable, repeatable, and production-ready.',
+    technologies: ['Python', 'Claude', 'AWS', 'Docker', 'Ubuntu', 'GitLab']
+  },
+  {
     title: 'Technology and Software Development Intern',
     company: 'WoMen of Connections Ministry Inc.',
     period: 'July 2025 - Present',
