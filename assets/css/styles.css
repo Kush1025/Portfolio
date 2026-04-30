@@ -1,0 +1,19 @@
+/* Global */
+body { box-sizing: border-box; }
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Sidebar shadow */
+.sidebar-shadow { box-shadow: 4px 0 20px rgba(0, 0, 0, 0.1); }
+
+/* Example gradient skill bar (if needed) */
+.skill-bar { background: linear-gradient(90deg, #f97316, #ea580c); }
+
+/* Print styles */
+@media print {
+  .sidebar { position: static !important; width: 100% !important; }
+  .main-content { margin-left: 0 !important; }
+  .no-print { display: none !important; }
+  body { background: white !important; color: black !important; }
+}
