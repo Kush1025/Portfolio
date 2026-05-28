@@ -85,7 +85,7 @@ window.education = [
 
 window.experience = [
   {
-    title: 'Junior Software Engineer',
+    title: 'Software Engineer',
     company: 'Stateable',
     period: 'Nov 2025 - Present',
     description: 'I built an AI-powered document processing pipeline that parses insurance documents in multiple formats and normalizes them into a single standardized schema. Using Python on Ubuntu, I combined Claude Code(via AI agents) with deterministic parsing logic such as regex-based cleaning and validation to extract key policy, commission, and quote data while handling noisy and inconsistent inputs. The pipeline was containerized with Docker, deployed using AWS Lambda via the AWS CLI, and integrated with DynamoDB and MongoDB for reliable storage and fast access. I also set up GitLab CI/CD to automate testing and deployments, ensuring the system was scalable, repeatable, and production-ready.',
@@ -109,6 +109,18 @@ window.experience = [
 
 window.projects = [
   {
+    title: 'Online Event Booking Platform',
+    description: 'Built a production-grade microservices backend platform using Java Spring Boot with 4 independent services (User, Event, Booking, Notification) and a dedicated Payment Service integrating Stripe for secure transactions. Implemented event-driven architecture using Apache Kafka for asynchronous inter-service communication ensuring zero notification loss, and integrated Redis caching reducing repeated database queries by ~60%. Secured all APIs with stateless JWT authentication and role-based access control (CUSTOMER/ORGANIZER) using Spring Security, with atomic MongoDB operations and optimistic locking to eliminate overbooking under high concurrent requests. Deployed services to Railway cloud with MongoDB Atlas, managing credentials securely via environment variables.',
+    technologies: ['Java', 'Spring Boot', 'Apache Kafka', 'Redis', 'MongoDB', 'Spring Security', 'JWT', 'Stripe', 'Docker', 'Railway', 'REST APIs', 'Microservices'],
+    image: '🎟️'
+  },
+  {
+  title: 'AI-Powered Career Skill Navigator',
+  description: 'Built a full-stack RAG-powered AI career advisor that helps software engineering job seekers explore skills, dependencies, and learning paths through a chat interface and searchable skill cards. Implemented a RAG pipeline using sentence-transformers and Pinecone to retrieve from a curated 50+ skill knowledge base, injecting top-k results into Claude API prompts for grounded, hallucination-free responses. Engineered a Redis semantic caching layer with cosine similarity thresholding (92%+) to avoid redundant LLM calls, with pytest coverage using mocked Claude API calls to validate retrieval logic.',
+  technologies: ['Python', 'FastAPI', 'Pinecone', 'Redis', 'Claude API', 'sentence-transformers', 'Next.js', 'TypeScript', 'TailwindCSS'],
+  image: '🧭'
+  },
+  {
     title: 'Real-Time Cryptocurrency Price Tracker',
     description: 'Built a full-stack application streaming live cryptocurrency prices from TradingView using Playwright browser automation with headed mode for transparency and real-time data extraction. Developed WSL-compatible solution with automatic fallback to mock mode, ensuring 100% demonstration availability across different development environments.',
     technologies: ['TypeScript', 'Next.js', 'Playwright', 'TailwindCSS'],
@@ -119,12 +131,6 @@ window.projects = [
     description: 'Developed an interactive, responsive UI in ReactJS, improving navigation flow and engagement for 100+ active users. Implemented dynamic rendering and efficient state management, reducing page load time by 40% and improving perceived performance.',
     technologies: ['ReactJS', 'Java', 'Spring Boot', 'MongoDB'],
     image: '🎬'
-  },
-  {
-    title: 'LLM Optimization via Small Model Integration',
-    description: 'Reimplemented and advanced the SuperICL framework by integrating black-box LLMs with fine-tuned models. Attained 80% MRPC and 75% SST-2 accuracy via RoBERTa-GPT-4 integration across 50K+ GLUE benchmark samples.',
-    technologies: ['LLM', 'PyTorch', 'Hugging Face', 'GLUE'],
-    image: '🤖'
   },
   {
     title: 'Enterprise Survey Management Platform',
