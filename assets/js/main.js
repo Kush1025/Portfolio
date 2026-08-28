@@ -85,13 +85,14 @@ function renderStats() {
   `).join('');
 }
 
-/* ------------------------------ Résumés --------------------------------- */
-function renderResumes() {
-  const container = $('#resumeLinks');
-  if (!container) return;
-  container.innerHTML = (window.resumes || []).map(r => `
-    <a href="${r.file}" download="${esc(r.name)}" target="_blank" rel="noopener">${esc(r.label)}</a>
-  `).join('');
+/* ------------------------------- Résumé --------------------------------- */
+function renderResume() {
+  const link = $('#btnResume');
+  const resume = window.resume;
+  if (!link || !resume) return;
+  link.href = resume.file;
+  link.setAttribute('download', resume.name);
+  link.addEventListener('click', () => toast('Downloading résumé…'));
 }
 
 /* ------------------------------- Skills --------------------------------- */
@@ -266,30 +267,6 @@ function setupMobileNav() {
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
 }
 
-/* ----------------------------- Résumé menu ------------------------------ */
-function setupResumeMenu() {
-  const btn = $('#btnResume');
-  const menu = $('#resumeMenu');
-  if (!btn || !menu) return;
-
-  const close = () => { menu.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); };
-
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const open = menu.classList.toggle('hidden');
-    btn.setAttribute('aria-expanded', String(!open));
-  });
-
-  menu.addEventListener('click', (e) => {
-    if (e.target.closest('a')) { toast('Downloading résumé…'); close(); }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('#resumeWrap')) close();
-  });
-  window.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-}
-
 /* ------------------------------ Scroll spy ------------------------------ */
 function setupScrollSpy() {
   const links = $$('#sideNav .nav-link');
@@ -327,7 +304,7 @@ function setupScrollSpy() {
 document.addEventListener('DOMContentLoaded', () => {
   renderProfile();
   renderStats();
-  renderResumes();
+  renderResume();
   renderSkills();
   renderExperience();
   renderProjects();
@@ -335,7 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCertifications();
 
   setupMobileNav();
-  setupResumeMenu();
   setupScrollSpy();
   setupReveal();
 });

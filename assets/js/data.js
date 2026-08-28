@@ -1,6 +1,6 @@
 /* =========================================================================
    Portfolio content - single source of truth.
-   Keep this file in sync with the resumes in /assets/resume.
+   Keep this file in sync with the résumé in /assets/resume.
    ========================================================================= */
 
 window.profileData = {
@@ -36,13 +36,11 @@ window.stats = [
   { value: '30+',  label: 'career skills mapped by an AI advisor I built',        context: 'FastAPI · RAG pipeline' }
 ];
 
-/* Role-targeted resumes available for download */
-window.resumes = [
-  { label: 'Software Engineer',         file: 'assets/resume/Kush%20Rajesh%20Shah%20-%20Resume.pdf',                 name: 'Kush Rajesh Shah - Software Engineer.pdf' },
-  { label: 'AI Engineer',               file: 'assets/resume/Kush%20Shah%20-%20Resume.pdf',                          name: 'Kush Rajesh Shah - AI Engineer.pdf' },
-  { label: 'Forward Deployed Engineer', file: 'assets/resume/Kush%20Rajesh%20Shah%20-%20FDE.pdf',                    name: 'Kush Rajesh Shah - FDE.pdf' },
-  { label: 'ServiceNow Developer',      file: 'assets/resume/Kush%20Rajesh%20Shah%20-%20ServiceNow%20Developer.pdf', name: 'Kush Rajesh Shah - ServiceNow Developer.pdf' }
-];
+/* Résumé available for download */
+window.resume = {
+  file: 'assets/resume/Kush%20Rajesh%20Shah%20-%20Resume.pdf',
+  name: 'Kush Rajesh Shah - Software Engineer.pdf'
+};
 
 /* =========================== Skills ===================================== */
 /* icon = inner markup of a 24x24 stroke SVG */
