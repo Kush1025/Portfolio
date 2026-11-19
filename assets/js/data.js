@@ -6,9 +6,9 @@
 window.profileData = {
   name: 'Kush Rajesh Shah',
   title: 'Software Engineer — AI, Full Stack & ServiceNow',
-  location: 'United States',
+  location: 'India',
   email: 'kushs2511@gmail.com',
-  phone: '+1 (571) 587-5328',
+  phone: '+91 91302 49459',
   linkedin: 'https://www.linkedin.com/in/kushshah1025/',
   github: 'https://github.com/Kush1025',
 

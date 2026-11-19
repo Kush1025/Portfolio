@@ -261,7 +261,7 @@ function setupMobileNav() {
 
   toggle.addEventListener('click', () => setOpen(sidebar.classList.contains('-translate-x-full')));
   backdrop?.addEventListener('click', () => setOpen(false));
-  $$('#sideNav a').forEach(a => a.addEventListener('click', () => {
+  $$('#sideNav a, #btnResume').forEach(a => a.addEventListener('click', () => {
     if (window.innerWidth < 1024) setOpen(false);
   }));
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape') setOpen(false); });
